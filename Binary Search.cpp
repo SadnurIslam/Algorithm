@@ -2,7 +2,23 @@
 using namespace std;
 
 void binary_search(int arr[],int n,int item){
-
+    int left,right,mid;
+    left = 0;
+    right = n-1;
+    while(left<=right){
+        mid = (left+right)/2;
+        if(arr[mid]==item){
+            cout<<"Found at position "<<mid<<endl;
+            return;
+        }
+        if(arr[mid]>item){
+            right = mid-1;
+        }
+        else{
+            left = mid+1;
+        }
+    }
+    cout<<"The item doesn't exist"<<endl;
 }
 
 int main() {
