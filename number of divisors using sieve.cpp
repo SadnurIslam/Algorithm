@@ -8,9 +8,9 @@ ll div_count(ll n){
     for(int i=0;i<=n;i++){
         isPrime[i] = true;
     }
-    for(int p=2;p*p<n;p++){
+    for(int p=2;p*p<=n;p++){
         if(isPrime){
-            for(int i=p*2;i<n;i=i+p){
+            for(int i=p*p;i<=n;i=i+p){
                 isPrime[i]=false;
             }
         }
